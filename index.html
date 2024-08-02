@@ -16,26 +16,29 @@
         .header{
             display: flex;
             align-items: center;
-            height: 70px;
-            width: 100%;            
-            background-color: #282923;
+            justify-content: center;
+            height: 100px;            
+            width: 100%;
+            /* backdrop-filter: blur(10px);
+            background: rgb(255,255,255,0.1);   */
             position: fixed;
-                       
+            z-index: 1;           
         }
         .logo{
-            width: 60px;
-            height: 60px;
-            padding-left: 5px;
+            width: 70px;
+            height: 70px;
+            vertical-align: middle;
         }
         .logo img{           
-            width: 100%;
+            width: 100%;                        
         }
         .menu_btn{
-            background-color: #000;
-            width: 40px;
-            height: 40px;            
+            border: 1px solid #aaa;
+            border-radius: 20%;            
+            width: 50px;
+            height: 50px;            
             position: absolute;            
-            right: 10px;
+            left: 10px;
         }
        .menu_btn span{            
             color: #fff;
@@ -48,7 +51,7 @@
             content: "";
             position: absolute;
             height: 2px;
-            width: 36px; 
+            width: 45px; 
             background-color: #aaa;
             margin: auto;
             top: 0;
@@ -59,14 +62,15 @@
         }
         nav{
             width: 100%;
-            height: calc(100vh - 400px);
-            /* height: 300px; */
+            height: calc(100vh - 400px);            
             backdrop-filter: blur(10px);
             background: rgb(255,255,255,0.3);            
-            position: absolute;            
-            top: 70px;            
-            left: -100%;            
-            transition: 0.5s;
+            position: absolute;
+            top: 400px;            
+            /* top: calc(-100vh - 400px);                         */
+            /* left: -100%;             */
+            opacity: 0;
+            transition: 2s;
         }
         nav a{
             display: block;
@@ -76,8 +80,10 @@
             border-bottom: 1px solid #a6e22c;
         }
         #menu_control:checked ~ .header nav{
-            left: 0;
-        }
+            /* left: 0; */
+            top: 100px;
+            opacity: 1;
+        }       
         /* ------------RWD------------*/
         @media screen and (min-width: 768px){
             .menu_btn{ 
@@ -100,13 +106,21 @@
             }
             nav a{
                 border-bottom: none;
-            }            
+            }
+            /* .banner .banner_text{
+                font-size: 0;
+            }
+            .banner .banner_text p{            
+                display: inline-block;
+                font-size: 32px; 
+            }             */
         }
         /* ---------------------↑導覽列↑--------------------- */
         
         .wrap{
             margin: auto;
-            width: 960px;
+            /* width: 960px; */
+            width: 100%;
             display: flex;
         }
         #brand_story{
@@ -120,9 +134,36 @@
             width: 100%;
             vertical-align: top;
         }
-        .banner img{
-            width: 100%;           
+        .banner{
+            width: 100%;
+            position: relative;
+            display: flex;                 
         }
+        .banner img{
+            width: 100%;                       
+        }
+        .banner .banner_text{
+            width: 100%;
+            color: #aaa;
+            position: absolute;            
+            left: 0;
+            bottom: 0;
+            padding-bottom: 20px; 
+            opacity: 1;
+            animation: banner_anime 4s;  
+        }
+        .banner .banner_text p{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            font-size: 16px; 
+        }
+        @keyframes banner_anime{
+            0%{ opacity: 0 }
+            0%{ padding-bottom: 500px; }                        
+            100%{ opacity: 1 }
+            100%{ padding-bottom: 20px; }
+        }        
         .path{
             display: flex;
         }
@@ -175,7 +216,8 @@
     </style>
 </head>
 <body>
-
+    
+   <!-- ---------------------↓導覽列↓--------------------- -->
     <input type="checkbox" name="" id="menu_control">
 
     <div class="header">
@@ -194,34 +236,26 @@
             <a href="#">實體店面</a>
         </nav>
     </div>
-
-
-    <!-- <div class="header">        
-        <a class="logo" href="index.html">
-            <img src="img/logo.png" alt="維伊飾品logo">
-        </a>
-        <nav>
-            <a href="#">關於我們</a>
-            <a href="#">最新消息</a>
-            <a href="#">產品</a>
-            <a href="#">服務</a>
-            <a href="#">聯絡我們</a>
-            <a href="#">網站地圖</a>
-        </nav>
-    </div> -->
-
     
-    <div class="banner">
-        <img src="img/banner.jpg">
+    <!-- ---------------------↓橫幅↓---------------------   -->
+    <div class="wrap">
+        <div class="banner">
+            <div class="banner_text">
+                <p>維伊正如唯一，獻給唯一的你</p>
+                <p>你就該值得擁有最適?</p>                
+            </div>
+            <img src="img/banner.jpg">
+        </div>
     </div>             
     
+    <!-- ---------------------↓麵包屑↓---------------------   -->
     <ul class="path">
         <li><a href="#">首頁</a></li>           
         <li><a href="#">最新消息</a></li>
         <li><a href="#">首頁</a></li>  
     </ul>
 
-
+    <!-- ---------------------↓關於我們↓--------------------- -->
     <div class="wrap">
         <div class="item" id="brand_story">
             <img src="https://picsum.photos/300/100?random=1">
@@ -230,8 +264,7 @@
         </div>              
     </div>
 
-
-
+    <!-- ---------------------↓內文2欄↓--------------------- -->
     <div class="wrap">
         <div class="item">
             <img src="https://picsum.photos/300/200?random=1">
@@ -243,6 +276,7 @@
         </div>        
     </div>
 
+    <!-- ---------------------↓內文3欄↓--------------------- -->
     <div class="wrap">
         <div class="item">
             <img src="https://picsum.photos/300/200?random=4">
@@ -258,6 +292,7 @@
         </div> 
     </div>
 
+    <!-- ---------------------↓蓋板廣告↓--------------------- -->
     <div class="advertisement">
         <a href="#">x</a>        
         <img src="img/advertisement.jfif">               
