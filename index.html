@@ -19,8 +19,6 @@
             justify-content: center;
             height: 100px;            
             width: 100%;
-            /* backdrop-filter: blur(10px);
-            background: rgb(255,255,255,0.1);   */
             position: fixed;
             z-index: 1;           
         }
@@ -66,11 +64,8 @@
             backdrop-filter: blur(10px);
             background: rgb(255,255,255,0.3);            
             position: absolute;
-            top: 400px;            
-            /* top: calc(-100vh - 400px);                         */
-            /* left: -100%;             */
-            opacity: 0;
-            transition: 2s;
+            top: 110vh;             
+            transition: 1s;
         }
         nav a{
             display: block;
@@ -79,8 +74,7 @@
             padding: 10px 20px;
             border-bottom: 1px solid #a6e22c;
         }
-        #menu_control:checked ~ .header nav{
-            /* left: 0; */
+        #menu_control:checked ~ .header nav{            
             top: 100px;
             opacity: 1;
         }       
@@ -97,12 +91,13 @@
             }
             nav{
                 position: relative; 
-                left: 0;                
                 display: flex;
                 width: auto;
                 height: auto;
                 top: 0;
-                background-color: transparent;                                   
+                right: 0;
+                background-color: transparent;
+                z-index: 2;                                   
             }
             nav a{
                 border-bottom: none;
@@ -110,23 +105,42 @@
         }
         /* ---------------------↑導覽列↑--------------------- */
         
-        .wrap{
-            margin: auto;
-            /* width: 960px; */
+        .wrap{ 
             width: 100%;
             display: flex;
-        }
-        #brand_story{
-            background-color: #aaa;
-        }
+            flex-wrap: wrap;
+            gap: 20px;
+        }        
         .item{
             width: 100%;
-            margin: 0 5px 5px;
+            flex: 0 0 calc(50% - 10px);
+            box-sizing: border-box;
+            border: 1px solid #aaa;                                 
         }
         .item img{
             width: 100%;
             vertical-align: top;
         }
+        .item .purchase_box{
+            display: flex;
+            flex-wrap: wrap;            
+            justify-content: center;
+            align-items: center;
+        }
+        .item .purchase_box .description{
+            padding: 5px;
+        }
+        .item .purchase_box .quantity{
+            display: flex;
+            padding: 5px;
+            justify-content: center;
+        }
+        .item .purchase_box .input{
+            width: 20%;
+        }
+        .item .purchase_box .input input{
+            width: 100%;
+        }         
         .banner{
             width: 100%;
             position: relative;
@@ -137,7 +151,7 @@
         }
         .banner .banner_text{
             width: 100%;
-            color: #f00;
+            color: #aaa;
             position: absolute;            
             left: 0;
             bottom: 0;
@@ -183,13 +197,12 @@
             top: 0;
             bottom: 0;
             left: 0;
-            right: 0;
-            display: none;                                              
+            right: 0;                                                         
         }
         .advertisement img{
             width: 100%;       
         }
-        .advertisement a{
+        .advertisement button{
             width: 30px;
             height: 30px;
             position: absolute;
@@ -243,51 +256,123 @@
     
     <!-- ---------------------↓麵包屑↓---------------------   -->
     <ul class="path">
-        <li><a href="#">首頁</a></li>           
+        <li><a href="#">品牌故事</a></li>           
         <li><a href="#">最新消息</a></li>
-        <li><a href="#">首頁</a></li>  
+        <li><a href="#">限時特賣</a></li>  
     </ul>
 
-    <!-- ---------------------↓關於我們↓--------------------- -->
-    <div class="wrap">
-        <div class="item" id="brand_story">
-            <img src="https://picsum.photos/300/100?random=1">
-            <p>品牌故事</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur animi autem blanditiis neque impedit magnam praesentium dolorum adipisci consequuntur iusto!</p>
-        </div>              
-    </div>
-    
-    <!-- ---------------------↓內文2欄↓--------------------- -->
-    <div class="wrap">
-        <div class="item">
-            <img src="https://picsum.photos/300/200?random=1">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur animi autem blanditiis neque impedit magnam praesentium dolorum adipisci consequuntur iusto!</p>
-        </div>
-        <div class="item">
-            <img src="https://picsum.photos/300/200?random=2">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur animi autem blanditiis neque impedit magnam praesentium dolorum adipisci consequuntur iusto!</p>
-        </div>        
-    </div>
 
-    <!-- ---------------------↓內文3欄↓--------------------- -->
     <div class="wrap">
         <div class="item">
-            <img src="https://picsum.photos/300/200?random=4">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur animi autem blanditiis neque impedit magnam praesentium dolorum adipisci consequuntur iusto!</p>
+            <img src="img/金色四叶草一对EH-1427_22_0.jpg">
+            <div class="purchase_box">
+                <div class="description"><p>商品說明Product Description</p></div>
+                <div class="quantity">
+                    <button>-</button>
+                    <div class="input">
+                        <input type="text" value="1">
+                    </div>                    
+                    <button>+</button>
+                </div>                
+            </div>
         </div>
         <div class="item">
-            <img src="https://picsum.photos/300/200?random=5">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur animi autem blanditiis neque impedit magnam praesentium dolorum adipisci consequuntur iusto!</p>
+            <img src="img/金色款式A爱心一对EH-1427_4_0.jpg">
+            <div class="purchase_box">
+                <div class="description"><p>商品說明Product Description</p></div>
+                <div class="quantity">
+                    <button>-</button>
+                    <div class="input">
+                        <input type="text" value="1">
+                    </div>
+                    <button>+</button>
+                </div>                
+            </div>
         </div>
         <div class="item">
-            <img src="https://picsum.photos/300/200?random=6">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur animi autem blanditiis neque impedit magnam praesentium dolorum adipisci consequuntur iusto!</p>
-        </div> 
-    </div>
+            <img src="img/金色款式B爱心一对EH-1427_9_0.jpg">
+            <div class="purchase_box">
+                <div class="description"><p>商品說明Product Description</p></div>
+                <div class="quantity">
+                    <button>-</button>
+                    <div class="input">
+                        <input type="text" value="1">
+                    </div>
+                    <button>+</button>
+                </div>                
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/金色黑锆石爱心一对EH-1427_13_0.jpg">
+            <div class="purchase_box">
+                <div class="description"><p>商品說明Product Description</p></div>
+                <div class="quantity">
+                    <button>-</button>
+                    <div class="input">
+                        <input type="text" value="1">
+                    </div>
+                    <button>+</button>
+                </div>                
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/806956_0.jpg">
+            <div class="purchase_box">
+                <div class="description"><p>商品說明Product Description</p></div>
+                <div class="quantity">
+                    <button>-</button>
+                    <div class="input">
+                        <input type="text" value="1">
+                    </div>
+                    <button>+</button>
+                </div>                
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/806957_0.jpg">
+            <div class="purchase_box">
+                <div class="description"><p>商品說明Product Description</p></div>
+                <div class="quantity">
+                    <button>-</button>
+                    <div class="input">
+                        <input type="text" value="1">
+                    </div>
+                    <button>+</button>
+                </div>                
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/B-905_3_0.jpg">
+            <div class="purchase_box">
+                <div class="description"><p>商品說明Product Description</p></div>
+                <div class="quantity">
+                    <button>-</button>
+                    <div class="input">
+                        <input type="text" value="1">
+                    </div>
+                    <button>+</button>
+                </div>                
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/EH-1478 _銀色_0.jpg">
+            <div class="purchase_box">
+                <div class="description"><p>商品說明Product Description</p></div>
+                <div class="quantity">
+                    <button>-</button>
+                    <div class="input">
+                        <input type="text" value="1">
+                    </div>
+                    <button>+</button>
+                </div>                
+            </div>
+        </div>                         
+    </div>   
+   
 
     <!-- ---------------------↓蓋板廣告↓--------------------- -->
     <div class="advertisement">
-        <a href="#">x</a>        
+        <button>x</button>        
         <img src="img/advertisement.jfif">               
     </div>
 
