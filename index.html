@@ -19,16 +19,22 @@
             justify-content: center;
             height: 100px;            
             width: 100%;
+            background: linear-gradient(to bottom, 
+            rgba(8, 8, 8),
+            rgba(8, 8, 8),
+            rgba(8, 8, 8, 0.8),
+            rgba(255, 255, 255, 0)
+            );            
             position: fixed;
             z-index: 1;           
         }
         .logo{
-            width: 70px;
-            height: 70px;
+            width: 100px;
+            height: 100px;
             vertical-align: middle;
         }
         .logo img{           
-            width: 100%;                        
+            width: 100%;                                     
         }
         .menu_btn{
             border: 1px solid #aaa;
@@ -101,6 +107,20 @@
             }
             nav a{
                 border-bottom: none;
+            }
+            .ad_wrap{
+                border: 10px solid #000;
+                width: auto;                
+                height: calc(100vh * 0.4);                
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                margin: auto;
+            }
+            .ad_wrap img{
+                object-fit: contain;                                
+                opacity: .5;
             }                  
         }
         /* ---------------------↑導覽列↑--------------------- */
@@ -109,13 +129,14 @@
             width: 100%;
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            /* gap: 10px; */
         }        
         .item{
             width: 100%;
-            flex: 0 0 calc(50% - 10px);
+            flex: 0 0 calc(50% - 40px);
             box-sizing: border-box;
-            border: 1px solid #aaa;                                 
+            border: 1px solid #aaa;
+            margin: 20px 20px;                                 
         }
         .item img{
             width: 100%;
@@ -144,7 +165,8 @@
         .banner{
             width: 100%;
             position: relative;
-            display: flex;                 
+            display: flex;
+            margin-top: 20px;                 
         }
         .banner img{
             width: 100%;                       
@@ -189,35 +211,57 @@
             color: #aaa;
             left: 0;
         }
-        .advertisement{
-            width: 300px;
-            height: 300px;            
+        .ad_bg{
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(10px);
+            background: rgb(255,255,255,0.3); 
+            position: fixed;
+            top: 0;
+            z-index: 1;
+        }
+        .ad_wrap{
+            width: 40%;
+            height: 40%;
             position: fixed;  
             margin: auto;
             top: 0;
             bottom: 0;
             left: 0;
-            right: 0;                                                         
+            right: 0;                       
+            border-radius: 5%;                                                                     */
         }
-        .advertisement img{
-            width: 100%;       
+        .ad_wrap img{
+            width: 100%;
+            height: 100%;
+            border-radius: 5%;
+            /* object-fit: cover;        */
         }
-        .advertisement button{
+        .ad_wrap a{
             width: 30px;
             height: 30px;
             position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;            
             top: -15px;
             right: -15px;
             background-color: #aaa;
-            color: #000;
-            text-decoration: none;
-            text-align: center;
-            line-height: 0.9;
+            color: #000;            
             font-size: 30px;
-            border-radius: 50%;            
+            border-radius: 50%;
+            z-index: 1;            
         }        
         .header nav a:hover{            
             background-color: #fa0;
+        }
+        .footer{
+            text-align: center;
+            background-color: #000; 
+            color: #888;
+            padding: 20px 0;
+            
         }        
     </style>
 </head>
@@ -225,10 +269,10 @@
     
    <!-- ---------------------↓導覽列↓--------------------- -->
     <input type="checkbox" name="" id="menu_control">
-
+            
     <div class="header">
         <h1 class="logo">
-            <a href="#"><img src="img/logo.png"></a>            
+            <a href="#"><img src="img/logo-removebg-preview.png"></a>            
         </h1>
         <label for="menu_control" class="menu_btn">
             <span>選單</span>
@@ -371,11 +415,33 @@
    
 
     <!-- ---------------------↓蓋板廣告↓--------------------- -->
-    <div class="advertisement">
-        <button>x</button>        
-        <img src="img/advertisement.jfif">               
+    <!-- <div class="ad_bg">
+        <div class="ad_wrap">
+            <a href="#" onclick="event.preventDefault(); closeAD();">x</a>       
+            <img src="img/advertisement.jfif">               
+        </div>
+    </div> -->
+
+    <!-- ---------------------↓防止導覽列上捲↓--------------------- -->
+    <script>
+        document.querySelector(".menu_btn").addEventListener("click", function(event){
+            event.preventDefault();
+            document.getElementById("menu_control").checked = !
+            document.getElementById("menu_control").checked;
+        });
+    </script>
+
+    <!-- ---------------------↓關閉廣告↓--------------------- -->
+    <script>
+        function closeAD(){
+            document.querySelector(".ad_bg").style.display = "none";
+        }
+    </script>
+
+    <!-- ---------------------↓頁尾↓--------------------- -->
+    
+    <div class="footer">
+        &copy; copyright 2024 by WEI_I 
     </div>
-
-
 </body>
 </html>
