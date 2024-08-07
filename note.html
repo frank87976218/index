@@ -67,15 +67,8 @@
             box-shadow: 0px -8px 0px #aaa,
                         0px 8px 0px #aaa;
         }
-        nav{
-            /* width: 100%;
-            height: calc(100vh - 400px);            
-            backdrop-filter: blur(10px);
-            background: rgb(255,255,255,0.3);            
-            position: absolute;
-            top: 110vh;             
-            transition: 1s; */
-            width: 110px;            
+        nav{                       
+            width: 110px;
             backdrop-filter: blur(10px);
             background: rgb(255,255,255,0.3);
             position: absolute;
@@ -99,7 +92,7 @@
             padding: 20px 20px;            
         }
         #menu_control:checked ~ .header nav{
-            width: 100%;  
+            width: 100%;   
             opacity: 1;
             left: 0;
         }
@@ -123,12 +116,12 @@
                 justify-content: right;
                 align-items: center;
             }
-            .wrap{
+            /* .wrap{
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
-            }          
+            }           */
             .item{
                 flex: 0 0 calc(25% - 35px);
                 margin: 0px 10px 10px 10px;
@@ -226,47 +219,7 @@
             content: "/";
             color: #aaa;
             left: 0;
-        }
-        .ad_bg{
-            width: 100%;
-            height: 100%;
-            backdrop-filter: blur(10px);
-            background: rgb(255,255,255,0.3); 
-            position: fixed;
-            top: 0;
-            z-index: 2;
-        }
-        .ad_wrap{
-            width: 150px;
-            height: 150px;
-            position: fixed;  
-            margin: auto;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;                       
-            border-radius: 5%;                                                                     */
-        }
-        .ad_wrap img{
-            width: 100%;
-            height: 100%;
-            border-radius: 5%;
-        }
-        .ad_wrap a{
-            width: 30px;
-            height: 30px;
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;            
-            top: -15px;
-            right: -15px;
-            background-color: #aaa;
-            color: #000;            
-            font-size: 30px;
-            border-radius: 50%;                        
-        }        
+        }               
         .header nav a:hover{            
             background-color: #fa0;        
         }
@@ -276,7 +229,18 @@
             color: #888;
             padding: 20px 0;
             
-        }        
+        }
+        .text{
+            padding: 10px 10px 30px 10px;
+        }
+        .text h1{
+            font-size: 30px;
+            line-height: 2;
+        }
+        .text p{
+            line-height: 2;
+        }
+                
     </style>
 </head>
 <body>
@@ -312,7 +276,7 @@
     
     <!-- ---------------------↓麵包屑↓---------------------   -->
     <ul class="path">
-        <li><a href="#">品牌故事</a></li>           
+        <li><a href="story.html">品牌故事</a></li>           
         <li><a href="note.html">購買須知</a></li>
         <li><a href="index.html">限時特賣</a></li>  
     </ul>
@@ -320,120 +284,27 @@
 
     <!-- ---------------------↓內文↓---------------------   -->
     <div class="wrap">
-        <div class="item">
-            <img src="img/金色四叶草一对EH-1427_22_0.jpg">
-            <div class="purchase_box">
-                <div class="description"><p>商品說明Product Description</p></div>
-                <div class="quantity">
-                    <button>-</button>
-                    <div class="input">
-                        <input type="text" value="1">
-                    </div>                    
-                    <button>+</button>
-                </div>                
-            </div>
-        </div>
-        <div class="item">
-            <img src="img/金色款式A爱心一对EH-1427_4_0.jpg">
-            <div class="purchase_box">
-                <div class="description"><p>商品說明Product Description</p></div>
-                <div class="quantity">
-                    <button>-</button>
-                    <div class="input">
-                        <input type="text" value="1">
-                    </div>
-                    <button>+</button>
-                </div>                
-            </div>
-        </div>
-        <div class="item">
-            <img src="img/金色款式B爱心一对EH-1427_9_0.jpg">
-            <div class="purchase_box">
-                <div class="description"><p>商品說明Product Description</p></div>
-                <div class="quantity">
-                    <button>-</button>
-                    <div class="input">
-                        <input type="text" value="1">
-                    </div>
-                    <button>+</button>
-                </div>                
-            </div>
-        </div>
-        <div class="item">
-            <img src="img/金色黑锆石爱心一对EH-1427_13_0.jpg">
-            <div class="purchase_box">
-                <div class="description"><p>商品說明Product Description</p></div>
-                <div class="quantity">
-                    <button>-</button>
-                    <div class="input">
-                        <input type="text" value="1">
-                    </div>
-                    <button>+</button>
-                </div>                
-            </div>
-        </div>
-        <div class="item">
-            <img src="img/806956_0.jpg">
-            <div class="purchase_box">
-                <div class="description"><p>商品說明Product Description</p></div>
-                <div class="quantity">
-                    <button>-</button>
-                    <div class="input">
-                        <input type="text" value="1">
-                    </div>
-                    <button>+</button>
-                </div>                
-            </div>
-        </div>
-        <div class="item">
-            <img src="img/806957_0.jpg">
-            <div class="purchase_box">
-                <div class="description"><p>商品說明Product Description</p></div>
-                <div class="quantity">
-                    <button>-</button>
-                    <div class="input">
-                        <input type="text" value="1">
-                    </div>
-                    <button>+</button>
-                </div>                
-            </div>
-        </div>
-        <div class="item">
-            <img src="img/B-905_3_0.jpg">
-            <div class="purchase_box">
-                <div class="description"><p>商品說明Product Description</p></div>
-                <div class="quantity">
-                    <button>-</button>
-                    <div class="input">
-                        <input type="text" value="1">
-                    </div>
-                    <button>+</button>
-                </div>                
-            </div>
-        </div>
-        <div class="item">
-            <img src="img/EH-1478 _銀色_0.jpg">
-            <div class="purchase_box">
-                <div class="description"><p>商品說明Product Description</p></div>
-                <div class="quantity">
-                    <button>-</button>
-                    <div class="input">
-                        <input type="text" value="1">
-                    </div>
-                    <button>+</button>
-                </div>                
-            </div>
+        <div class="text">
+            <h1>🌟歡迎光臨維伊商品🌟</h1>
+            <p>維伊正如唯一，獻給唯一的你</p>
+            <p>你就該值得擁有最適合自己的飾品</p>
+            <p>為自己加分，也添加自信</p>
+            <p>‼️為了提供您完整且優質的服務，下單前請閱讀以下事項。</p>
+            <p>IG🔍<a href="https://www.instagram.com/weieaccstore/">weieaccstore</a>(IG不定期舉辦抽獎🎁及優惠活動，隨時關注享優惠)</p>
+            <p>🔶️下單一項商品附贈酒精棉片x1，兩項商品贈送酒精棉片     x2，以此類推……。</p>
+            <p>⛔加購商品不贈送酒精棉片。</p>
+            <p>🔶️購買兩項商品贈送擦拭布x1，購買四項商品贈送擦拭布x2，以此類推……。</p>
+            <p>📍客服上班時間:週一至週五:10:00-20:00</p>
+            <p>週六週日及國定假日:10:00-18:00</p>
+            <h2>📍商品注意事項</h2>
+            <p>*商品會在下單後1-3個工作日寄出，不包含例假日</p>
+            <p>*商品實品與照片可能會有色差，介意勿下單</p>
+            <p>*耳環耳針皆為s925純銀，質地較柔軟，可能會因搬運而有些微彎曲，屬正常現象，收到後輕輕扳回即可</p>
+            <p>*考量衛生問題，飾品拆封後恕不退換貨</p>
+            <p>*飾品由闆娘親手包裝出貨，嚴格檢視產品品質，不會販售瑕疵商品，但商品難免會出現小刮傷等等問題，不可避免，介意勿下單，售出後皆不接受退換貨服務</p> 
         </div>                         
-    </div>   
-   
+    </div>     
 
-    <!-- ---------------------↓蓋板廣告↓--------------------- -->
-    <!-- <div class="ad_bg">
-        <div class="ad_wrap">
-            <a href="#" onclick="event.preventDefault(); closeAD();">x</a>       
-            <img src="img/advertisement.jfif">               
-        </div> -->
-    </div>
 
     <!-- ---------------------↓防止導覽列上捲↓--------------------- -->
     <script>
@@ -442,13 +313,6 @@
             document.getElementById("menu_control").checked = !
             document.getElementById("menu_control").checked;
         });
-    </script>
-
-    <!-- ---------------------↓關閉廣告↓--------------------- -->
-    <script>
-        function closeAD(){
-            document.querySelector(".ad_bg").style.display = "none";
-        }
     </script>
 
     <!-- ---------------------↓頁尾↓--------------------- -->

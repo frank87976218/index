@@ -67,15 +67,8 @@
             box-shadow: 0px -8px 0px #aaa,
                         0px 8px 0px #aaa;
         }
-        nav{
-            /* width: 100%;
-            height: calc(100vh - 400px);            
-            backdrop-filter: blur(10px);
-            background: rgb(255,255,255,0.3);            
-            position: absolute;
-            top: 110vh;             
-            transition: 1s; */
-            width: 110px;            
+        nav{                       
+            width: 110px;
             backdrop-filter: blur(10px);
             background: rgb(255,255,255,0.3);
             position: absolute;
@@ -99,7 +92,7 @@
             padding: 20px 20px;            
         }
         #menu_control:checked ~ .header nav{
-            width: 100%;  
+            width: 100%;   
             opacity: 1;
             left: 0;
         }
@@ -123,12 +116,12 @@
                 justify-content: right;
                 align-items: center;
             }
-            .wrap{
+            /* .wrap{
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
-            }          
+            }           */
             .item{
                 flex: 0 0 calc(25% - 35px);
                 margin: 0px 10px 10px 10px;
@@ -138,6 +131,7 @@
         
         .wrap{            
             width: 100%;
+            display: flex;
             background-image: url("img/float2.jpg");
             background-size: cover;
         }        
@@ -226,47 +220,7 @@
             content: "/";
             color: #aaa;
             left: 0;
-        }
-        .ad_bg{
-            width: 100%;
-            height: 100%;
-            backdrop-filter: blur(10px);
-            background: rgb(255,255,255,0.3); 
-            position: fixed;
-            top: 0;
-            z-index: 2;
-        }
-        .ad_wrap{
-            width: 150px;
-            height: 150px;
-            position: fixed;  
-            margin: auto;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;                       
-            border-radius: 5%;                                                                     */
-        }
-        .ad_wrap img{
-            width: 100%;
-            height: 100%;
-            border-radius: 5%;
-        }
-        .ad_wrap a{
-            width: 30px;
-            height: 30px;
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;            
-            top: -15px;
-            right: -15px;
-            background-color: #aaa;
-            color: #000;            
-            font-size: 30px;
-            border-radius: 50%;                        
-        }        
+        }               
         .header nav a:hover{            
             background-color: #fa0;        
         }
@@ -276,7 +230,46 @@
             color: #888;
             padding: 20px 0;
             
-        }        
+        }
+        .img_group{            
+            width: 50%;
+            display: flex;
+            position: relative;
+        }
+        .img_box{
+            display: inline-block;
+            width: 90px;
+            height: 90px;
+        }
+        .box1{
+            position: absolute;
+            left: 0;
+            top: 0;            
+        }
+        .box2{
+            position: absolute;
+            right: 0;
+            top: 80px;
+        }
+        .box3{
+            position: absolute;
+            left: 0;
+            top: 160px;
+        }
+        .img_group img{
+            width: 100%;            
+        }
+        .text{
+            padding: 10px 10px 30px 10px;
+        }
+        .text h1{
+            font-size: 30px;
+            line-height: 2;
+        }
+        .text p{
+            line-height: 2;
+        }
+                
     </style>
 </head>
 <body>
@@ -312,7 +305,7 @@
     
     <!-- ---------------------↓麵包屑↓---------------------   -->
     <ul class="path">
-        <li><a href="#">品牌故事</a></li>           
+        <li><a href="story.html">品牌故事</a></li>           
         <li><a href="note.html">購買須知</a></li>
         <li><a href="index.html">限時特賣</a></li>  
     </ul>
@@ -320,120 +313,45 @@
 
     <!-- ---------------------↓內文↓---------------------   -->
     <div class="wrap">
-        <div class="item">
-            <img src="img/金色四叶草一对EH-1427_22_0.jpg">
-            <div class="purchase_box">
-                <div class="description"><p>商品說明Product Description</p></div>
-                <div class="quantity">
-                    <button>-</button>
-                    <div class="input">
-                        <input type="text" value="1">
-                    </div>                    
-                    <button>+</button>
-                </div>                
-            </div>
+        <div class="img_group">
+            <div class="img_box box1"><img src="img/story_img (1).jpg" alt=""></div>
+            <div class="img_box box2"><img src="img/story_img (2).jpg" alt=""></div>
+            <div class="img_box box3"><img src="img/story_img (3).jpg" alt=""></div>
         </div>
-        <div class="item">
-            <img src="img/金色款式A爱心一对EH-1427_4_0.jpg">
-            <div class="purchase_box">
-                <div class="description"><p>商品說明Product Description</p></div>
-                <div class="quantity">
-                    <button>-</button>
-                    <div class="input">
-                        <input type="text" value="1">
-                    </div>
-                    <button>+</button>
-                </div>                
-            </div>
-        </div>
-        <div class="item">
-            <img src="img/金色款式B爱心一对EH-1427_9_0.jpg">
-            <div class="purchase_box">
-                <div class="description"><p>商品說明Product Description</p></div>
-                <div class="quantity">
-                    <button>-</button>
-                    <div class="input">
-                        <input type="text" value="1">
-                    </div>
-                    <button>+</button>
-                </div>                
-            </div>
-        </div>
-        <div class="item">
-            <img src="img/金色黑锆石爱心一对EH-1427_13_0.jpg">
-            <div class="purchase_box">
-                <div class="description"><p>商品說明Product Description</p></div>
-                <div class="quantity">
-                    <button>-</button>
-                    <div class="input">
-                        <input type="text" value="1">
-                    </div>
-                    <button>+</button>
-                </div>                
-            </div>
-        </div>
-        <div class="item">
-            <img src="img/806956_0.jpg">
-            <div class="purchase_box">
-                <div class="description"><p>商品說明Product Description</p></div>
-                <div class="quantity">
-                    <button>-</button>
-                    <div class="input">
-                        <input type="text" value="1">
-                    </div>
-                    <button>+</button>
-                </div>                
-            </div>
-        </div>
-        <div class="item">
-            <img src="img/806957_0.jpg">
-            <div class="purchase_box">
-                <div class="description"><p>商品說明Product Description</p></div>
-                <div class="quantity">
-                    <button>-</button>
-                    <div class="input">
-                        <input type="text" value="1">
-                    </div>
-                    <button>+</button>
-                </div>                
-            </div>
-        </div>
-        <div class="item">
-            <img src="img/B-905_3_0.jpg">
-            <div class="purchase_box">
-                <div class="description"><p>商品說明Product Description</p></div>
-                <div class="quantity">
-                    <button>-</button>
-                    <div class="input">
-                        <input type="text" value="1">
-                    </div>
-                    <button>+</button>
-                </div>                
-            </div>
-        </div>
-        <div class="item">
-            <img src="img/EH-1478 _銀色_0.jpg">
-            <div class="purchase_box">
-                <div class="description"><p>商品說明Product Description</p></div>
-                <div class="quantity">
-                    <button>-</button>
-                    <div class="input">
-                        <input type="text" value="1">
-                    </div>
-                    <button>+</button>
-                </div>                
-            </div>
-        </div>                         
-    </div>   
-   
+        <div class="text">
+            <!-- <h1>🌟維伊商品的品牌故事🌟</h1> -->
+            <p>｜關於維伊STORY故事</p>
+            <p>STORY故事銀飾創立於2009年，</p>
+            <p>意為記錄、紀念生活的故事而存在。</p>
+            <p>品牌的設計初衷為探索人與人、物之間的關係，</p>
+            <p>讓銀飾品不僅是裝飾，</p>
+            <p>而是情感與記憶的載體，</p>
+            <p>為妳寫幸福故事。</p>
 
-    <!-- ---------------------↓蓋板廣告↓--------------------- -->
-    <!-- <div class="ad_bg">
-        <div class="ad_wrap">
-            <a href="#" onclick="event.preventDefault(); closeAD();">x</a>       
-            <img src="img/advertisement.jfif">               
-        </div> -->
-    </div>
+            <!-- <p>｜Taiwan design & made in Taiwan.</p>
+            <p>我們的每一件銀飾，</p>
+            <p>從設計開發到量產，全由品牌一手包辦!</p>
+
+            <p>不同於批貨選品、大規模機器化的生產方式，</p>
+            <p>銀飾品如有歲月或使用上的痕跡，</p>
+            <p>無論是維修或保養，我們皆能為您回復成最初的模樣，</p>
+            <p>妳的信物，我們來守護。</p>
+
+            <p>｜IP角色授權⎯第一指定合作品牌</p>
+            <p>STORY故事銀飾善於賦予銀飾特有的情感、符號，</p>
+            <p>在小小的首飾裡，期望給妳大大的快樂，</p>
+            <p>豐沛的設計能量、精湛的工藝與超高性價比</p>
+            <p>成為IP角色、明星、戲劇…等指定邀請合作的對象。</p> -->
+
+            <!-- <p>｜Story book box</p>
+            <p>我們從聽故事的人，</p>
+            <p>慢慢變成擁有故事的人，</p>
+            <p>所以用故事書造型的品牌包裝，</p>
+            <p>「每件銀飾品都訴說著一個動人故事」，</p>
+            <p>就讓我們用銀飾，寫幸福的故事。</p> -->
+        </div>                         
+    </div>     
+
 
     <!-- ---------------------↓防止導覽列上捲↓--------------------- -->
     <script>
@@ -442,13 +360,6 @@
             document.getElementById("menu_control").checked = !
             document.getElementById("menu_control").checked;
         });
-    </script>
-
-    <!-- ---------------------↓關閉廣告↓--------------------- -->
-    <script>
-        function closeAD(){
-            document.querySelector(".ad_bg").style.display = "none";
-        }
     </script>
 
     <!-- ---------------------↓頁尾↓--------------------- -->
