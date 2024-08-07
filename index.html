@@ -32,6 +32,8 @@
             width: 100px;
             height: 100px;
             vertical-align: middle;
+            padding: 10px;
+            z-index: 2;
         }
         .logo img{           
             width: 100%;                                     
@@ -43,6 +45,7 @@
             height: 50px;            
             position: absolute;            
             left: 10px;
+            z-index: 3;
         }
        .menu_btn span{            
             color: #fff;
@@ -65,24 +68,39 @@
                         0px 8px 0px #aaa;
         }
         nav{
-            width: 100%;
+            /* width: 100%;
             height: calc(100vh - 400px);            
             backdrop-filter: blur(10px);
             background: rgb(255,255,255,0.3);            
             position: absolute;
             top: 110vh;             
-            transition: 1s;
+            transition: 1s; */
+            width: calc(100vh + 110px);            
+            backdrop-filter: blur(10px);
+            background: rgb(255,255,255,0.3);
+            position: absolute;
+            top: 0;
+            left: -110px;
+            opacity: 0;            
+            transition: 0.8s;
+        }
+        nav::before{
+            content: "/";
+            font-size: 100px;
+            opacity: 0;
+        }
+        nav div{
+            display: flex;
         }
         nav a{
             display: block;
             text-decoration: none;
-            color: #a6e22c;
-            padding: 10px 20px;
-            border-bottom: 1px solid #a6e22c;
+            color: #fff;
+            padding: 20px 20px;            
         }
-        #menu_control:checked ~ .header nav{            
-            top: 100px;
+        #menu_control:checked ~ .header nav{  
             opacity: 1;
+            left: 0;
         }       
         /* ------------RWD------------*/
         @media screen and (min-width: 768px){
@@ -95,42 +113,24 @@
                 align-items: center;
             }
             nav{
-                position: relative; 
-                display: flex;
-                width: auto;
-                height: auto;
-                top: 0;
-                right: 0;
                 background-color: transparent;
-                z-index: 2;                                   
-            }
-            nav a{
-                border-bottom: none;
-            }
+                width: 100%;
+                display: flex;
+                left: 0;
+                opacity: 1;
+                justify-content: right;
+                align-items: center;
+            }          
             .item{
                 flex: 1 0 calc(25% - 15px);
             }            
-            .ad_wrap{
-                border: 10px solid #000;
-                width: auto;                
-                height: calc(100vh * 0.4);                
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                margin: auto;
-            }
-            .ad_wrap img{
-                object-fit: contain;                                
-                opacity: .5;
-            }                 
         }
         /* ---------------------↑導覽列↑--------------------- */
         
         .wrap{ 
             width: 100%;
             display: flex;
-            flex-wrap: wrap;            
+            flex-wrap: wrap;                       
             /* gap: 20px; */
         }        
         .item{
@@ -224,7 +224,7 @@
             background: rgb(255,255,255,0.3); 
             position: fixed;
             top: 0;
-            z-index: 1;
+            z-index: 2;
         }
         .ad_wrap{
             width: 150px;
@@ -255,11 +255,10 @@
             background-color: #aaa;
             color: #000;            
             font-size: 30px;
-            border-radius: 50%;
-            z-index: 1;            
+            border-radius: 50%;                        
         }        
         .header nav a:hover{            
-            background-color: #fa0;
+            background-color: #fa0;        
         }
         .footer{
             text-align: center;
@@ -277,18 +276,18 @@
             
     <div class="header">
         <h1 class="logo">
-            <a href="#"><img src="img/logo-removebg-preview.png"></a>            
+            <a href="index.html"><img src="img/logo-removebg-preview.png"></a>            
         </h1>
         <label for="menu_control" class="menu_btn">
             <span>選單</span>
-        </label>
-        <nav>            
-            <a href="#">關於我們</a>         
-            <a href="#">最新消息</a>
-            <a href="#">產品</a>
-            <a href="#">服務</a>
-            <a href="#">聯絡我們</a>
-            <a href="#">實體店面</a>
+        </label>        
+        <nav>
+            <div><a href="#">關於我們</a></div>
+            <div><a href="#">最新消息</a></div>
+            <div><a href="#">產品</a></div>
+            <div><a href="#">服務</a></div>
+            <div><a href="#">聯絡我們</a></div>
+            <div><a href="#">實體店面</a></div>
         </nav>
     </div>
     
@@ -420,12 +419,12 @@
    
 
     <!-- ---------------------↓蓋板廣告↓--------------------- -->
-    <div class="ad_bg">
+    <!-- <div class="ad_bg">
         <div class="ad_wrap">
             <a href="#" onclick="event.preventDefault(); closeAD();">x</a>       
             <img src="img/advertisement.jfif">               
         </div>
-    </div>
+    </div> -->
 
     <!-- ---------------------↓防止導覽列上捲↓--------------------- -->
     <script>
