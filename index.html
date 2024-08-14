@@ -31,12 +31,20 @@
         .logo{
             width: 100px;
             height: 100px;
-            vertical-align: middle;
             padding: 10px;
             z-index: 2;
         }
         .logo img{           
             width: 100%;                                     
+        }
+        .cart{
+            position: absolute;
+            width: 50px;
+            right: 20px;
+            opacity: 0.8;
+        }
+        .cart img{
+            width: 100%;
         }
         .menu_btn{
             border: 1px solid #aaa;
@@ -67,14 +75,7 @@
             box-shadow: 0px -8px 0px #aaa,
                         0px 8px 0px #aaa;
         }
-        nav{
-            /* width: 100%;
-            height: calc(100vh - 400px);            
-            backdrop-filter: blur(10px);
-            background: rgb(255,255,255,0.3);            
-            position: absolute;
-            top: 110vh;             
-            transition: 1s; */
+        nav{ 
             width: 110px;            
             backdrop-filter: blur(10px);
             background: rgb(255,255,255,0.3);
@@ -95,7 +96,7 @@
         nav a{
             display: block;
             text-decoration: none;
-            color: #fff;
+            color: #fff;            
             padding: 20px 20px;            
         }
         #menu_control:checked ~ .header nav{
@@ -117,11 +118,17 @@
             nav{
                 background-color: transparent;
                 width: 100%;
-                display: flex;
-                left: 0;
+                display: flex; 
+                left: 0;               
                 opacity: 1;
                 justify-content: right;
                 align-items: center;
+            }
+            nav::after{                
+                content: "/////";
+                color: #fff;
+                font-size: 50px;
+                opacity: 0;
             }
             .wrap{
                 display: flex;
@@ -134,6 +141,7 @@
                 margin: 0px 10px 10px 10px;
             }            
         }
+        /* ------------RWD------------*/
         /* ---------------------↑導覽列↑--------------------- */
         
         .wrap{            
@@ -302,6 +310,7 @@
             <div><a href="#">聯絡我們</a></div>
             <div><a href="#">實體店面</a></div>
         </nav>
+        <div class="cart"><a href="#"><img src="/img/cart3.png" alt=""></div></a>
     </div>
     
     <!-- ---------------------↓橫幅↓---------------------   -->

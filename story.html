@@ -38,6 +38,15 @@
         .logo img{           
             width: 100%;                                     
         }
+        .cart{
+            position: absolute;
+            width: 50px;
+            right: 20px;
+            opacity: 0.8;
+        }
+        .cart img{
+            width: 100%;
+        }
         .menu_btn{
             border: 1px solid #aaa;
             border-radius: 20%;            
@@ -116,12 +125,12 @@
                 justify-content: right;
                 align-items: center;
             }
-            /* .wrap{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
-            }           */
+            nav::after{                
+                content: "/////";
+                color: #fff;
+                font-size: 50px;
+                opacity: 0;
+            }
             .item{
                 flex: 0 0 calc(25% - 35px);
                 margin: 0px 10px 10px 10px;
@@ -279,24 +288,25 @@
 <body>
     
    <!-- ---------------------↓導覽列↓--------------------- -->
-    <input type="checkbox" name="" id="menu_control">
+   <input type="checkbox" name="" id="menu_control">
             
-    <div class="header">
-        <h1 class="logo">
-            <a href="index.html"><img src="img/logo-removebg-preview.png"></a>            
-        </h1>
-        <label for="menu_control" class="menu_btn">
-            <span>選單</span>
-        </label>        
-        <nav>
-            <div><a href="#">關於我們</a></div>
-            <div><a href="#">最新消息</a></div>
-            <div><a href="#">產品</a></div>
-            <div><a href="#">服務</a></div>
-            <div><a href="#">聯絡我們</a></div>
-            <div><a href="#">實體店面</a></div>
-        </nav>
-    </div>
+   <div class="header">
+       <h1 class="logo">
+           <a href="index.html"><img src="img/logo-removebg-preview.png"></a>            
+       </h1>
+       <label for="menu_control" class="menu_btn">
+           <span>選單</span>
+       </label>        
+       <nav>
+           <div><a href="#">關於我們</a></div>
+           <div><a href="#">最新消息</a></div>
+           <div><a href="#">產品</a></div>
+           <div><a href="#">服務</a></div>
+           <div><a href="#">聯絡我們</a></div>
+           <div><a href="#">實體店面</a></div>
+       </nav>
+       <div class="cart"><a href="#"><img src="/img/cart3.png" alt=""></div></a>
+   </div>
     
     <!-- ---------------------↓橫幅↓---------------------   -->
     <div class="banner">
@@ -325,7 +335,7 @@
         <div class="text">
             <!-- <h1>🌟維伊商品的品牌故事🌟</h1> -->
             <p>｜關於維伊STORY故事</p>
-            <p>STORY故事銀飾創立於2009年，</p>
+            <p>STORY故事銀飾創立於2020年，</p>
             <p>意為記錄、紀念生活的故事而存在。</p>
             <p>品牌的設計初衷為探索人與人、物之間的關係，</p>
             <p>讓銀飾品不僅是裝飾，</p>
