@@ -100,6 +100,9 @@
             color: #fff;
             padding: 20px 20px;            
         }
+        nav a img{
+            display: none;
+        }
         #menu_control:checked ~ .header nav{
             width: 100%;   
             opacity: 1;
@@ -125,12 +128,10 @@
                 justify-content: right;
                 align-items: center;
             }
-            nav::after{                
-                content: "/////";
-                color: #fff;
-                font-size: 50px;
-                opacity: 0;
-            }
+            nav a img{
+                display: block;
+                width: 50px;
+            } 
             .item{
                 flex: 0 0 calc(25% - 35px);
                 margin: 0px 10px 10px 10px;
@@ -202,7 +203,7 @@
             display: flex;
             justify-content: center;
             margin-bottom: 10px;
-            font-size: 16px; 
+            font-size: calc(10px + 2vw);  
         }
         @keyframes banner_anime{
             0%{ opacity: 0 }
@@ -304,8 +305,8 @@
            <div><a href="#">服務</a></div>
            <div><a href="#">聯絡我們</a></div>
            <div><a href="#">實體店面</a></div>
-       </nav>
-       <div class="cart"><a href="#"><img src="/img/cart3.png" alt=""></div></a>
+           <div><a href="#"><img src="/img/cart3.png"></a></div>
+       </nav>       
    </div>
     
     <!-- ---------------------↓橫幅↓---------------------   -->
