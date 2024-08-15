@@ -19,6 +19,9 @@
     position: fixed;
     z-index: 1;           
 }
+.header nav a:hover{  
+    color: #fa0;
+}  
 .logo{
     width: 100px;
     height: 100px;
@@ -158,3 +161,72 @@ nav a{
 }
 /* ------------RWD------------*/
 /* ---------------------↑導覽列↑--------------------- */
+
+/* ---------------------↓banner↓--------------------- */
+.banner{
+    width: 100%;
+    position: relative;
+    display: flex;
+    padding-top: 20px;                 
+}
+.banner img{
+    width: 100%;                       
+}
+.banner .banner_text{
+    width: 100%;
+    color: #aaa;
+    position: absolute;            
+    left: 0;
+    bottom: 0;
+    padding-bottom: 20px; 
+    opacity: 1;
+    animation: banner_anime 3s;  
+}
+.banner .banner_text p{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: calc(10px + 2vw); 
+}
+@keyframes banner_anime{
+    0%{ opacity: 0 }
+    0%{ padding-bottom: 500px; }                        
+    100%{ opacity: 1 }
+    100%{ padding-bottom: 20px; }
+}
+/* ---------------------↑banner↑--------------------- */
+
+/* ---------------------↓breadcrumb↓--------------------- */
+.path{
+    display: flex;
+    background-image: url("img/float2.jpg");
+    background-size: cover;
+}
+.path li{
+    position: relative;
+    padding: 6px 8px;
+}
+.path li a{
+    text-decoration: none;
+    color: #aaa;
+    font-size: 14px;
+}
+.path li + li::before{
+    position: absolute;
+    content: "/";
+    color: #aaa;
+    left: 0;
+}
+.path a:hover{  
+    color: #fa0;
+}  
+/* ---------------------↑breadcrumb↑--------------------- */
+
+/* ---------------------↓footer↓--------------------- */
+.footer{
+    text-align: center;
+    background-color: #000; 
+    color: #888;
+    padding: 20px 0;            
+} 
+/* ---------------------↑footer↑--------------------- */ 
