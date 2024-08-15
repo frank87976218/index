@@ -32,7 +32,7 @@
             width: 100px;
             height: 100px;
             padding: 10px;
-            z-index: 2;
+            z-index: 1;
         }
         .logo img{           
             width: 100%;                                     
@@ -43,7 +43,8 @@
             height: 50px;
             right: 20px;
             opacity: 0.8;
-            background-color: #fff;
+            z-index: 1;
+            padding-bottom: 7px;                       
         }        
         .cart a img{
             width: 100%;
@@ -86,6 +87,7 @@
             left: -110px;
             opacity: 0;            
             transition: 0.8s;
+            z-index: 2;
         }
         nav::before{
             content: "/";
@@ -125,6 +127,7 @@
                 opacity: 1;
                 justify-content: right;
                 align-items: center;
+                z-index: 0;
             }
             nav::after{                
                 content: "/////";
@@ -276,13 +279,11 @@
             color: #000;            
             font-size: 30px;
             border-radius: 50%;                        
-        }        
+        }
+        .path a:hover,                
         .header nav a:hover{  
             color: #fa0;
-        }
-        .path a:hover{ 
-            color: #fa0;
-        }
+        }        
         .footer{
             text-align: center;
             background-color: #000; 
@@ -313,7 +314,7 @@
             <div><a href="#">實體店面</a></div>            
         </nav>
         <div class="cart">
-            <a href="#"><img src="/img/2202.png_860.png" alt=""></a>
+            <a href="#"><img src="img/user-icon-removebg.png" alt=""></a>
         </div>
     </div>
     
