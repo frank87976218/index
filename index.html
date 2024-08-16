@@ -8,141 +8,32 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="header_banner_breadcrumb_footer.css">
     <style>
-        .wrap{            
-            width: 100%;
-            display: flex;
-            background-image: url("img/float2.jpg");
-            background-size: cover;
+        section{            
+            width: 100%; 
+            border-top: 1px solid #aaa;
         }        
-        .item{
-            display: inline-block;
-            width: 47%;
-            box-sizing: border-box;
-            border: 1px solid #aaa;
-            margin: 0px 1% 10px 1%;
-        }
-        .item img{
+        .img_box{            
             width: 100%;
-            vertical-align: top;
+            padding: 20px;
         }
-        .item .purchase_box{
+        .img_box img{
+            width: 100%;
+        }        
+        .text_box{            
             display: flex;
-            flex-wrap: wrap;            
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-        }
-        .item .purchase_box .description{
+            padding: 20px;
             width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 5px;
         }
-        .item .purchase_box .quantity{
-            display: flex;
-            padding: 5px;
-            justify-content: center;
-        }
-        .item .purchase_box .input{
-            width: 20%;
-        }
-        .item .purchase_box .input input{
-            width: 100%;
-        }         
-        .banner{
-            width: 100%;
-            position: relative;
-            display: flex;
-            padding-top: 20px;                 
-        }
-        .banner img{
-            width: 100%;                       
-        }
-        .banner .banner_text{
-            width: 100%;
-            color: #aaa;
-            position: absolute;            
-            left: 0;
-            bottom: 0;
-            padding-bottom: 20px; 
-            opacity: 1;
-            animation: banner_anime 3s;  
-        }
-        .banner .banner_text p{
-            display: flex;
-            justify-content: center;
-            margin-bottom: 10px;
-            font-size: calc(10px + 2vw);  
-        }
-        @keyframes banner_anime{
-            0%{ opacity: 0 }
-            0%{ padding-bottom: 500px; }                        
-            100%{ opacity: 1 }
-            100%{ padding-bottom: 20px; }
-        }        
-        .path{
-            display: flex;
-            background-image: url("img/float2.jpg");
-            background-size: cover;
-        }
-        .path li{
-            position: relative;
-            padding: 6px 8px;
-        }
-        .path li a{
-            text-decoration: none;
-            color: #aaa;
-            font-size: 14px;
-        }
-        .path li + li::before{
-            position: absolute;
-            content: "/";
-            color: #aaa;
-            left: 0;
-        }               
-        .path a:hover,                
-        .header nav a:hover{  
-            color: #fa0;
-        }
-        .img_group{            
-            width: 40%;
-            /* display: flex; */
-            position: relative;
-        }
-        .img_group img{
-            width: 100%;            
-        }
-        .img_box{
-            display: inline-block;
-            /* width: calc(90px + 10vw); */
-            width: 90px;
-            height: 90px;
-        }
-        .box1{
-            position: absolute;
-            left: 0;
-            top: 0;            
-        }
-        .box2{
-            position: absolute;
-            right: 0;
-            top: 80px;
-        }
-        .box3{
-            position: absolute;
-            left: 0;
-            bottom: 0;
-        }        
-        .text{
-            width: 60%;
-            padding: 10px 10px 30px 10px;
-        }
-        .text h1{
-            font-size: 30px;
-            line-height: 2;
-        }
-        .text p{
-            line-height: 2;
+        .text_box h1{
+            font-size: 32px;
+            padding-bottom: 20px;            
+        }       
+        .text_box p{
+            font-size: 20px;
+            line-height: 1.5;
         }
         .ad_bg{
             width: 100%;
@@ -183,14 +74,7 @@
             color: #000;            
             font-size: 30px;
             border-radius: 50%;                        
-        } 
-        .footer{
-            text-align: center;
-            background-color: #000; 
-            color: #888;
-            padding: 20px 0;
-            
-        }           
+        }                  
     </style>
 </head>
 <body>
@@ -231,35 +115,155 @@
             <p>維伊正如唯一，獻給唯一的你</p>
             <p>您值得擁有最適合的</p>                
         </div>
-        <img src="img/banner.jpg">
+        <div class="arrow_down">
+            <button><img src="img/arrow-down.png" alt=""></button>
+        </div>        
     </div>
     
     <!-- ---------------------↓麵包屑↓---------------------   -->
-    <ul class="path">
+    <!-- <ul class="path">
         <li><a href="index.html">品牌故事</a></li>           
         <li><a href="note.html">購買須知</a></li>
         <li><a href="shopping.html">限時特賣</a></li>  
-    </ul>
+    </ul> -->
     
 
     <!-- ---------------------↓內文↓---------------------   -->
-    <div class="wrap">
-        <div class="img_group">
-            <div class="img_box box1"><img src="img/story_img (1).jpg" alt=""></div>
-            <div class="img_box box2"><img src="img/story_img (2).jpg" alt=""></div>
-            <div class="img_box box3"><img src="img/story_img (3).jpg" alt=""></div>
-        </div>
-        <div class="text">
-            <!-- <h1>🌟維伊商品的品牌故事🌟</h1> -->
-            <p>｜關於維伊STORY故事</p>
-            <p>STORY故事銀飾創立於2020年，</p>
-            <p>意為記錄、紀念生活的故事而存在。</p>
-            <p>品牌的設計初衷為探索人與人、物之間的關係，</p>
-            <p>讓銀飾品不僅是裝飾，</p>
-            <p>而是情感與記憶的載體，</p>
-            <p>為妳寫幸福故事。</p>
+    <div class="main">
+        <section class="section1">
+            <div class="img_box">
+                <img src="img/story_img (1).jpg" alt="">
+            </div>
+            <div class="text_box">
+                <h1>｜關於維伊WEI_I｜</h1>
+                <p>意為記錄、紀念生活的故事而存在。
+                品牌的設計初衷為探索人與間的關係，
+                讓銀飾品不僅是裝飾，
+                而是情感與記憶的載體，
+                為妳寫幸福故事。</p>
+            </div>
+        </section>
+        <section class="section2">
+            <div class="img_box">
+                <img src="img/story_img (2).jpg" alt="">
+            </div>
+            <div class="text_box">
+                <h1>｜台灣設計 & 製造｜</h1>
+                <p>
+                    我們的每一件銀飾，
+                    從設計開發到量產，全一手包辦!
+                    不同於批貨選品、大規模機生產方式，
+                    銀飾品如有歲月或使用上的痕跡，
+                    無論是維修或保養，皆能為您修復，
+                    妳的信物，我們來守護。
+                </p>
+            </div>
+        </section>
+        <section class="section3">
+            <div class="img_box">
+                <img src="img/story_img (3).jpg" alt="">
+            </div>
+            <div class="text_box">
+                <h1>｜IP角色指定品牌｜</h1>                
+                <p>
+                    故事銀飾
+                    善於賦予銀飾特有的情感、符號，
+                    在小小的首飾裡，期望給妳大的快樂，
+                    豐沛的設計能量、精湛的工超高性價比
+                    成為IP角色、明星、戲劇定作的對象。
+                </p>
+            </div>
+        </section>
+        <section class="section4">
+            <div class="img_box">
+                <img src="img/story_img (4).jpg" alt="">
+            </div>
+            <div class="text_box">
+                <h1>｜Story book box｜</h1>
+                <p>
+                    我們從聽故事的人，
+                    慢慢變成擁有故事的人，
+                    所以用故事書造型的品牌包裝，
+                    「每件銀飾品都訴說著一人故事」，
+                    就讓我們用銀飾，寫幸福的故事。
+                </p>
+            </div>
+        </section>
+        
+        
+        <!-- <section class="section1">
+            <div class="img_box box1">
+                <div>
+                    <img src="img/story_img (1).jpg" alt="">
+                </div>
+                <div>
+                    <p>｜關於維伊STORY故事</p>
+                    <p>STORY故事銀飾創立於2020年，</p>
+                    <p>意為記錄、紀念生活的故事而存在。</p>
+                    <p>品牌的設計初衷為探索人與人、物之間的關係，</p>
+                    <p>讓銀飾品不僅是裝飾，</p>
+                    <p>而是情感與記憶的載體，</p>
+                    <p>為妳寫幸福故事。</p>
+                </div>
+            </div>
+            <div class="img_box box2">
+                <div>
+                    <img src="img/story_img (2).jpg" alt="">
+                </div>
+                <div>
+                    <p>｜關於維伊STORY故事</p>
+                    <p>STORY故事銀飾創立於2020年，</p>
+                    <p>意為記錄、紀念生活的故事而存在。</p>
+                    <p>品牌的設計初衷為探索人與人、物之間的關係，</p>
+                    <p>讓銀飾品不僅是裝飾，</p>
+                    <p>而是情感與記憶的載體，</p>
+                    <p>為妳寫幸福故事。</p>
+                </div>
+            </div>
+            <div class="img_box box3">
+                <div>
+                    <img src="img/story_img (3).jpg" alt="">
+                </div>
+                <div>
+                    <p>｜關於維伊STORY故事</p>
+                    <p>STORY故事銀飾創立於2020年，</p>
+                    <p>意為記錄、紀念生活的故事而存在。</p>
+                    <p>品牌的設計初衷為探索人與人、物之間的關係，</p>
+                    <p>讓銀飾品不僅是裝飾，</p>
+                    <p>而是情感與記憶的載體，</p>
+                    <p>為妳寫幸福故事。</p>
+                </div>
+            </div>
+            <div class="img_box box4">
+                <div>
+                    <img src="img/story_img (3).jpg" alt="">
+                </div>
+                <div>
+                    <p>｜關於維伊STORY故事</p>
+                    <p>STORY故事銀飾創立於2020年，</p>
+                    <p>意為記錄、紀念生活的故事而存在。</p>
+                    <p>品牌的設計初衷為探索人與人、物之間的關係，</p>
+                    <p>讓銀飾品不僅是裝飾，</p>
+                    <p>而是情感與記憶的載體，</p>
+                    <p>為妳寫幸福故事。</p>
+                </div>
+            </div> -->
 
-            <!-- <p>｜Taiwan design & made in Taiwan.</p>
+
+
+            <!-- <div class="img_box box2">
+                <img src="img/story_img (2).jpg" alt="">
+            </div>
+            <div class="img_box box3">
+                <img src="img/story_img (3).jpg" alt="">
+            </div>
+            </div> -->
+
+        <!-- <div class="text">
+            <h1>🌟維伊商品的品牌故事🌟</h1>
+            
+
+            <p>｜Taiwan design & made in Taiwan.</p>
             <p>我們的每一件銀飾，</p>
             <p>從設計開發到量產，全由品牌一手包辦!</p>
 
@@ -279,8 +283,8 @@
             <p>慢慢變成擁有故事的人，</p>
             <p>所以用故事書造型的品牌包裝，</p>
             <p>「每件銀飾品都訴說著一個動人故事」，</p>
-            <p>就讓我們用銀飾，寫幸福的故事。</p> -->
-        </div>                         
+            <p>就讓我們用銀飾，寫幸福的故事。</p>
+        </div>                          -->
     </div>     
 
     <!-- ---------------------↓頁尾↓--------------------- -->    
@@ -289,12 +293,12 @@
     </div>
 
     <!-- ---------------------↓蓋板廣告↓--------------------- -->
-    <div class="ad_bg">
+    <!-- <div class="ad_bg">
         <div class="ad_wrap">
             <a href="#" onclick="event.preventDefault(); closeAD();">x</a>       
             <img src="img/advertisement.jfif">               
         </div>
-    </div>
+    </div> -->
      <!-- ---------------------↓關閉廣告↓--------------------- -->
      <script>
         function closeAD(){
