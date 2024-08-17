@@ -9,40 +9,43 @@
     <link rel="stylesheet" href="header_banner_breadcrumb_footer.css">
     <style>                
         .item{
-            display: inline-block;
-            width: 47%;
-            box-sizing: border-box;
-            border: 1px solid #aaa;
-            margin: 0px 1% 10px 1%;
-        }
-        .item img{
-            width: 100%;
-            vertical-align: top;
-        }
-        .item .purchase_box{
-            display: flex;
-            flex-wrap: wrap;            
-            justify-content: center;
-            align-items: center;
-        }
-        .item .purchase_box .description{
             width: 100%;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            padding: 5px;
+            gap: 10px;
         }
-        .item .purchase_box .quantity{
+        .item .product{
             display: flex;
+            flex-direction: column;            
+            width: calc(50% - 10px);
             padding: 5px;
+        }
+        .item .product img{
+            border: 1px solid #aaa;
+        }
+        .item .product .purchase_box{
+            display: flex;
+            flex-direction: column;
             justify-content: center;
+            align-items: center;
+            border: 1px solid #aaa;
         }
-        .item .purchase_box .input{
-            width: 20%;
+        .item .product .purchase_box .description{
+            padding: 5px 0px;
         }
-        .item .purchase_box .input input{
+        .item .product .purchase_box .quantity{
+            display: flex;
+            width: 50%;
+            padding: 5px 0px;
+        }
+        input{
             width: 100%;
-        } 
+        }
+        @media screen and (min-width: 768px){
+            .item .product{
+                width: calc(25% - 10px);
+            }            
+        }
     </style>
 </head>
 <body>
@@ -94,21 +97,114 @@
     
 
     <!-- ---------------------↓內文↓---------------------   -->    
-    <div class="main">
+    <div class="main">        
         <div class="item">
-            <img src="img/金色四叶草一对EH-1427_22_0.jpg">
-            <div class="purchase_box">
-                <div class="description"><p>商品說明Product Description</p></div>
-                <div class="quantity">
-                    <button>-</button>
-                    <div class="input">
-                        <input type="text" value="1">
-                    </div>                    
-                    <button>+</button>
-                </div>                
-            </div>
+            <div class="product">
+                <img src="img/金色四叶草一对EH-1427_22_0.jpg">
+                <div class="purchase_box">
+                    <div class="description"><p>商品說明Product Description</p></div>
+                    <div class="quantity">
+                        <button>-</button>
+                        <div class="input">
+                            <input type="text" value="1">
+                        </div>                    
+                        <button>+</button>
+                    </div>                
+                </div>
+            </div>  
+            <div class="product">
+                <img src="img/金色款式A爱心一对EH-1427_4_0.jpg">
+                <div class="purchase_box">
+                    <div class="description"><p>商品說明Product Description</p></div>
+                    <div class="quantity">
+                        <button>-</button>
+                        <div class="input">
+                            <input type="text" value="1">
+                        </div>                    
+                        <button>+</button>
+                    </div>                
+                </div>
+            </div> 
+            <div class="product">
+                <img src="img/金色款式B爱心一对EH-1427_9_0.jpg">
+                <div class="purchase_box">
+                    <div class="description"><p>商品說明Product Description</p></div>
+                    <div class="quantity">
+                        <button>-</button>
+                        <div class="input">
+                            <input type="text" value="1">
+                        </div>                    
+                        <button>+</button>
+                    </div>                
+                </div>
+            </div>  
+            <div class="product">
+                <img src="img/金色黑锆石爱心一对EH-1427_13_0.jpg">
+                <div class="purchase_box">
+                    <div class="description"><p>商品說明Product Description</p></div>
+                    <div class="quantity">
+                        <button>-</button>
+                        <div class="input">
+                            <input type="text" value="1">
+                        </div>                    
+                        <button>+</button>
+                    </div>                
+                </div>
+            </div>  
+            <div class="product">
+                <img src="img/806956_0.jpg">
+                <div class="purchase_box">
+                    <div class="description"><p>商品說明Product Description</p></div>
+                    <div class="quantity">
+                        <button>-</button>
+                        <div class="input">
+                            <input type="text" value="1">
+                        </div>                    
+                        <button>+</button>
+                    </div>                
+                </div>
+            </div>    
+            <div class="product">
+                <img src="img/806957_0.jpg">
+                <div class="purchase_box">
+                    <div class="description"><p>商品說明Product Description</p></div>
+                    <div class="quantity">
+                        <button>-</button>
+                        <div class="input">
+                            <input type="text" value="1">
+                        </div>                    
+                        <button>+</button>
+                    </div>                
+                </div>
+            </div>   
+            <div class="product">
+                <img src="img/B-905_3_0.jpg">
+                <div class="purchase_box">
+                    <div class="description"><p>商品說明Product Description</p></div>
+                    <div class="quantity">
+                        <button>-</button>
+                        <div class="input">
+                            <input type="text" value="1">
+                        </div>                    
+                        <button>+</button>
+                    </div>                
+                </div>
+            </div> 
+            <div class="product">
+                <img src="img/EH-1478 _銀色_0.jpg">
+                <div class="purchase_box">
+                    <div class="description"><p>商品說明Product Description</p></div>
+                    <div class="quantity">
+                        <button>-</button>
+                        <div class="input">
+                            <input type="text" value="1">
+                        </div>                    
+                        <button>+</button>
+                    </div>                
+                </div>
+            </div>            
         </div>
-        <div class="item">
+        <!-- <div class="item">
             <img src="img/金色款式A爱心一对EH-1427_4_0.jpg">
             <div class="purchase_box">
                 <div class="description"><p>商品說明Product Description</p></div>
@@ -198,7 +294,7 @@
                     <button>+</button>
                 </div>                
             </div>
-        </div>                         
+        </div>                          -->
     </div>   
 
     <!-- ---------------------↓頁尾↓--------------------- -->    

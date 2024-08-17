@@ -130,18 +130,7 @@ nav a{
 }
 
 /* ------------RWD------------*/
-@media screen and (min-width: 768px){
-    /* ------------首頁內文大於768px換成左右排列-------------- */
-    section{
-        display: flex;
-    }
-    .img_box{
-        width: 50%;
-    }
-    .text_box{
-        width: 50%;
-    }
-    /* ---------------------------------------------------- */
+@media screen and (min-width: 768px){    
     .menu_btn{ 
         display: none;                 
     }
@@ -172,10 +161,10 @@ nav a{
         justify-content: center;
         align-items: center;
     }          
-    .item{
+    /* .item{
         flex: 0 0 calc(25% - 35px);
         margin: 0px 10px 10px 10px;
-    }            
+    }             */
 }
 /* ------------RWD------------*/
 /* ---------------------↑導覽列↑--------------------- */
