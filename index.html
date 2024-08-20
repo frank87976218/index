@@ -110,8 +110,11 @@
         </nav>
         <div class="scan_btn">
             <div id="reader" style="width:300px;"></div>
-            <button onclick="startScanning()" style="background-color: transparent; border: none;">
+            <!-- <button onclick="startScanning()" style="background-color: transparent; border: none;">
                 <img src="img/qrcode_scan.png">
+            </button> -->
+            <button onclick="startScanning()" style="background-color: transparent; border: none;">
+                <img src="img/upc_scan.png">
             </button>
             <p id="result"></p>
         </div>
@@ -241,7 +244,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <!-- ---------------------↓qrcode↓--------------------- -->
-    <script src="qrcode.js"></script>
+    <!-- <script src="qrcode.js"></script> -->
+
+    <!-- ---------------------↓UPC↓--------------------- -->
+    <script src="upc.js"></script>
 
 </body>
 </html>

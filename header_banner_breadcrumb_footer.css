@@ -52,14 +52,9 @@
 }
 #reader{
     position: absolute;
+    max-width: 100;
     top: 70px;
-    left: -260px;
-    /* top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 500px;
-    height: auto; */
+    left: -180px;
     z-index: 999;
 } 
 .dropdown{
