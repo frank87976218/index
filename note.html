@@ -40,6 +40,13 @@
             <!-- <div><a href="#">聯絡我們</a></div> -->
             <div><a href="#">實體店面</a></div>            
         </nav>
+        <div class="scan_btn">
+            <div id="reader" style="width:300px;"></div>
+            <button onclick="startScanning()" style="background-color: transparent; border: none;">
+                <img src="img/qrcode_scan.png">
+            </button>
+            <p id="result"></p>
+        </div>
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="img/user-icon-removebg.png" alt="">
@@ -57,7 +64,10 @@
         <div class="banner_text">
             <p>維伊正如唯一，獻給唯一的你</p>
             <p>您值得擁有最適合的</p>                
-        </div>        
+        </div>
+        <div class="arrow_down">
+            <button><img src="img/arrow-down.png" alt=""></button>
+        </div>           
     </div>
     
     <!-- ---------------------↓麵包屑↓---------------------   -->

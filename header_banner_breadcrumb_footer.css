@@ -38,12 +38,24 @@
 .logo img{           
     width: 100%;                                     
 }
+.scan_btn{
+    width: 40px;
+    height: 40px;            
+    position: absolute;            
+    right: 85px;
+}
+.scan_btn img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;            
+} 
 .dropdown{
     display: flex;
     position: absolute;
     width: 80px;
     height: 80px;
-    right: 20px;            
+    right: 0;            
     z-index: 1;                                              
 }
 .dropdown-menu li:not(:last-child){
@@ -150,7 +162,7 @@ nav a{
         z-index: 0;
     }
     nav::after{                
-        content: "///////";
+        content: "//////////";
         color: #fff;
         font-size: 50px;
         opacity: 0;
@@ -160,11 +172,7 @@ nav a{
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-    }          
-    /* .item{
-        flex: 0 0 calc(25% - 35px);
-        margin: 0px 10px 10px 10px;
-    }             */
+    }  
 }
 /* ------------RWD------------*/
 /* ---------------------↑導覽列↑--------------------- */
@@ -175,8 +183,7 @@ nav a{
     position: relative;
     background-image: url(img/banner_img2.jpg);
     background-size: cover;
-    display: flex;    
-    /* align-items: center;     */
+    display: flex;   
 }
 .banner .banner_text{
     width: 100%;
@@ -218,7 +225,6 @@ nav a{
     display: flex;
     background-image: url("img/float2.jpg");
     background-size: cover;
-    /* padding: 5px; */
 }
 .path li{
     position: relative;
@@ -242,7 +248,6 @@ nav a{
 
 /* ---------------------↓footer↓--------------------- */
 .footer{
-    /* height: calc(100vh - 100px); */
     height: 50px;
     text-align: center;
     background-color: #000; 
