@@ -38,6 +38,7 @@
 .logo img{           
     width: 100%;                                     
 }
+/* ------------scan_btn------------*/
 .scan_btn{
     width: 40px;
     height: 40px;            
@@ -50,6 +51,7 @@
     top: 0;
     right: 0;            
 }
+/* ------------scan_btn------------*/
 #reader{
     position: absolute;
     max-width: 100;
@@ -147,41 +149,6 @@ nav a{
     opacity: 1;
     left: 0;
 }
-
-/* ------------RWD------------*/
-@media screen and (min-width: 768px){    
-    .menu_btn{ 
-        display: none;                 
-    }
-    .header{
-        display: flex;
-        justify-content: space-between;                
-        align-items: center;
-    }            
-    nav{
-        background-color: transparent;
-        width: 100%;
-        display: flex; 
-        left: 0;               
-        opacity: 1;
-        justify-content: right;
-        align-items: center;
-        z-index: 0;
-    }
-    nav::after{                
-        content: "//////////";
-        color: #fff;
-        font-size: 50px;
-        opacity: 0;
-    }
-    .wrap{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }  
-}
-/* ------------RWD------------*/
 /* ---------------------↑導覽列↑--------------------- */
 
 /* ---------------------↓banner↓--------------------- */
@@ -262,3 +229,49 @@ nav a{
     padding: 20px 0;            
 } 
 /* ---------------------↑footer↑--------------------- */ 
+
+/* ---------------------↓RWD↓--------------------- */ 
+@media screen and (min-width: 768px){    
+    .menu_btn{ 
+        display: none;                 
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;                
+        align-items: center;
+    }            
+    nav{
+        background-color: transparent;
+        width: 100%;
+        display: flex; 
+        left: 0;               
+        opacity: 1;
+        justify-content: right;
+        align-items: center;
+        z-index: 0;
+    }
+    .wrap{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    nav::after{                
+        content: "//////////";
+        font-size: 50px;
+        opacity: 0;
+    }
+}
+@media screen and (min-width: 1024px){
+    .scan_btn{
+        display: none;
+    }
+    nav::after{                
+        content: "/////";
+        font-size: 50px;
+        opacity: 0;
+    } 
+}
+/* ---------------------↑RWD↑--------------------- */ 
