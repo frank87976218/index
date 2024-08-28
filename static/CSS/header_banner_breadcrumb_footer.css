@@ -179,7 +179,7 @@ nav a{
     display: flex;
     justify-content: center;
     position: absolute;
-    bottom: 0;
+    bottom: 15vh;
 }
 .arrow_down button{
     background-color: transparent;
