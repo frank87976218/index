@@ -1,7 +1,7 @@
 /* ---------------------↓內文包裹↓--------------------- */
 .main{            
     width: 100%;    
-    background-image: url("/static/img/float2.jpg");
+    background-image: url("https://frank87976218.github.io/index/static/img/float2.jpg");
     background-size: cover;    
 }
 /* ---------------------↑內文包裹↑--------------------- */
@@ -154,7 +154,7 @@ nav a{
 .banner{
     height: 100vh;    
     position: relative;
-    background-image: url(/static/img/banner_img2.jpg);
+    background-image: url(https://frank87976218.github.io/index/static/img/banner_img2.jpg);
     background-size: cover;
     display: flex;   
 }
@@ -196,7 +196,7 @@ nav a{
 /* ---------------------↓breadcrumb↓--------------------- */
 .path{
     display: flex;
-    background-image: url("/static/img/float2.jpg");
+    background-image: url("https://frank87976218.github.io/index/static/img/float2.jpg");
     background-size: cover;
 }
 .path li{
