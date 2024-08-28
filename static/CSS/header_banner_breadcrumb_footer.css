@@ -1,7 +1,7 @@
 /* ---------------------↓內文包裹↓--------------------- */
 .main{            
     width: 100%;    
-    background-image: url("img/float2.jpg");
+    background-image: url("/static/img/float2.jpg");
     background-size: cover;    
 }
 /* ---------------------↑內文包裹↑--------------------- */
@@ -51,13 +51,12 @@
     top: 0;
     right: 0;            
 }
-/* ------------scan_btn------------*/
 #reader{
     position: absolute;
-    max-width: 100;
     top: 70px;
-    left: -180px;
+    left: -180px;  
     z-index: 999;
+/* ------------scan_btn------------*/
 } 
 .dropdown{
     display: flex;
@@ -155,7 +154,7 @@ nav a{
 .banner{
     height: 100vh;    
     position: relative;
-    background-image: url(img/banner_img2.jpg);
+    background-image: url(/static/img/banner_img2.jpg);
     background-size: cover;
     display: flex;   
 }
@@ -197,7 +196,7 @@ nav a{
 /* ---------------------↓breadcrumb↓--------------------- */
 .path{
     display: flex;
-    background-image: url("img/float2.jpg");
+    background-image: url("/static/img/float2.jpg");
     background-size: cover;
 }
 .path li{
