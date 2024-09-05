@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/CSS/reset.css">
+    <link rel="stylesheet" href="static/CSS/login_register_msg.css">
+    <link rel="stylesheet" href="static/CSS/header_banner_breadcrumb_footer.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <h1 class="logo">
+            <a href="index.html"><img src="static/img/logo-removebg-preview.png"></a>            
+        </h1>
+    </div>
+    <div class="main1">
+        <div style="justify-content: center;" class="main2">
+            <p style="font-size: 20px;" id="message"></p>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; copyright 2024 by WEI_I
+    </div>
+    <script src="static/js/main.js"></script>
+    <script>       
+        loading();
+        function loading(){
+            let loginSuccess = localStorage.getItem("loginSuccess");
+            let registerSuccess = localStorage.getItem("registerSuccess")                
+            let message = document.getElementById("message");
+            let counter = 0;
+            console.log(loginSuccess);
+            console.log(registerSuccess);
+            if (loginSuccess === "true"){                
+                message.textContent = "登入成功，即將跳轉頁面"
+                // 每過300ms在loading後面加一個點               
+                const i = setInterval(function() {
+                    message.textContent += "."
+                    counter++;
+                    if (counter === 5) {
+                        clearInterval(i);
+                        setTimeout(function(){
+                            localStorage.setItem("loginSuccess", false);
+                            location.href = "index.html";
+                        }, 300);                        
+                    }
+                }, 300);
+            }else if(registerSuccess  === "true"){                
+                message.textContent = "註冊成功，回到登入畫面"
+                const i = setInterval(function() {
+                    message.textContent += "."
+                    counter++;
+                    if (counter === 5) {
+                        clearInterval(i);
+                        setTimeout(function(){
+                            localStorage.setItem("registerSuccess", false);
+                            location.href = "login.html";
+                        }, 300);  
+                    }
+                }, 300);   
+            }
+        }
+    </script>    
+</body>
+</html>
