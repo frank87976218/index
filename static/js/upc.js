@@ -1,3 +1,8 @@
+let product = {
+    "productId": "123456789999",
+    "productName": "EH-1478 _銀色_0",    
+    "productNum": 2
+}
 function startScanning() {
     const html5QrCode = new Html5Qrcode("reader");
 
@@ -12,8 +17,13 @@ function startScanning() {
         },
         codeMessage => {
             // When the barcode is successfully scanned
-            document.getElementById('result').innerText = `Scanned: ${codeMessage}`;
-            
+            let productId =document.getElementById('productId').innerText = `${codeMessage}`;
+            for (let key in product){
+                if (product[productNum] === productId){
+                    document.getElementById('productName').innerText = product[productName];
+                    document.getElementById('productNum').innerText = product[productNum];
+                }                
+            }            
             // If the barcode is expected to contain a URL, you can parse it
             try {
                 const url = new URL(codeMessage);
