@@ -3,7 +3,9 @@ function startScanning() {
 
     // Start scanning using the back camera
     html5QrCode.start(
+        // 設定相機為後置鏡頭
         { facingMode: "environment" },
+        //設定fps以及視窗大小
         {
             fps: 10,    // Optional, frame per seconds for barcode scanning
             qrbox: { width: 250, height: 100 }  // Optional, scanning box size, adjusted for barcodes
