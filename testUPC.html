@@ -26,7 +26,7 @@
         <button onclick="startScanning()" style="background-color: transparent; border: none;">
             <img src="static/img/upc_scan.png">
         </button>
-        <p id="result"></p>
+        <!-- <p id="result"></p> -->
     </div>
     <div>
         <div class="container">
@@ -58,8 +58,8 @@
                     <tbody>
                         <!-- {% for obj in queryset %} -->
                         <tr>
-                            <th scope="row" id="result"></th>
-                            <td></td>
+                            <th scope="row"></th>
+                            <td id="result"></td>
                             <td>
                             <a class="btn btn-primary btn-sm" href="/depart/{{ obj.id }}/edit/">編輯</a>
                             <a class="btn btn-danger btn-sm" href="/depart/delete/?nid={{ obj.id }}">刪除</a>
