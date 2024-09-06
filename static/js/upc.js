@@ -17,11 +17,12 @@ function startScanning() {
         },
         codeMessage => {
             // When the barcode is successfully scanned
-            let productId =document.getElementById('productId').innerText = `${codeMessage}`;
+            let productId = document.getElementById('productId').innerText = `${codeMessage}`;
             for (let key in product){
-                if (product[productNum] === productId){
-                    document.getElementById('productName').innerText = product[productName];
-                    document.getElementById('productNum').innerText = product[productNum];
+                if (product["productId"] === productId){
+                    document.getElementById('productName').innerText = product["productName"];
+                    document.getElementById('productNum').innerText = product["productNum"];
+                    break
                 }                
             }            
             // If the barcode is expected to contain a URL, you can parse it
